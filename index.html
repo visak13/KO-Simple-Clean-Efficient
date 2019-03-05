@@ -22,7 +22,7 @@
             <div class="col-9 display" id="job-container" data-bind="with: JobViewModel">
                 <ul data-bind="foreach: jobItems">
                     <li class="job-item">
-                        <job-component params="pJob: $data"></job-component>
+                        <job-component params="pJob: $data" class="job"></job-component>
                     </li>
                 </ul>
             </div>
@@ -45,6 +45,8 @@
 <script type="text/javascript" src="components/job/_jobComponent.js"></script>
 <!-- Checkbox -->
 <script type="text/javascript" src="components/checkbox/_checkboxComponent.js"></script>
+<!-- Files Processed -->
+<script type="text/javascript" src="components/filesProcessed/_filesProcessed.js"></script>
 <!-- Footer -->
 <script type="text/javascript" src="components/footer/_footer.js"></script>
 <!-- Include Knockout Components ENDS -->

@@ -16,8 +16,9 @@ ko.components.register('job-component',
             self.errorsCount = pData.pJob.errorsCount;
         },
         template:
-            '<checkbox-component></checkbox-component>\
-            <span data-bind="text: $component.name"></span>\
-            <span data-bind="text: $component.creationTime"></span>'
+            '<checkbox-component class="col-1"></checkbox-component>\
+            <span data-bind="text: $component.name" class="col-3"></span>\
+            <span data-bind="text: $component.creationTime" class="col-3"></span>\
+            <files-processed-component params="pFilesProcessed: $component.fileProcessed" class="col-1"></files-processed-component>'
     }
 );

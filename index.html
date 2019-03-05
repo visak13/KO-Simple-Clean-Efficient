@@ -1,0 +1,55 @@
+<html>
+<head>
+    <script type="text/javascript" src="knockout-3.5.0.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/jobList.css">
+</head>
+<body>
+    <header-component></header-component>
+    <div class="container-fluid display-pane">
+        <div class="row display-pane">
+            <div class="col-3 menu" id="menu-container" data-bind="with: MenuViewModel">
+                <ul data-bind="foreach: menuItems">
+                    <li class="menu-item">
+                        <menu-component params="pMenu: $data"></menu-component>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-9 display" id="job-container" data-bind="with: JobViewModel">
+                <ul data-bind="foreach: jobItems">
+                    <li class="job-item">
+                        <job-component params="pJob: $data"></job-component>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer-component class="anchor-bottom"></footer-component>
+</body>
+<!-- Load Data From Server STARTS -->
+<script type="text/javascript" src="components/data/_dataLoader.js"></script>
+<!-- Load Data From Server ENDS -->
+
+<!-- Include Knockout Components STARTS -->
+<!-- Header -->
+<script type="text/javascript" src="components/header/_header.js"></script>
+<!-- Menu -->
+<script type="text/javascript" src="components/menu/_menuLoader.js"></script>
+<script type="text/javascript" src="components/menu/_menuComponent.js"></script>
+<!-- Job -->
+<script type="text/javascript" src="components/job/_jobLoader.js"></script>
+<script type="text/javascript" src="components/job/_jobComponent.js"></script>
+<!-- Checkbox -->
+<script type="text/javascript" src="components/checkbox/_checkboxComponent.js"></script>
+<!-- Footer -->
+<script type="text/javascript" src="components/footer/_footer.js"></script>
+<!-- Include Knockout Components ENDS -->
+
+<!-- Bind Knockout STARTS -->
+<script type="text/javascript" src="components/data/_dataBinder.js"></script>
+<!-- Bind Knockout ENDS -->
+</html>

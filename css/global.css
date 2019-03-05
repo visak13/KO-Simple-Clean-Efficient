@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Titillium';
+    src: url('../fonts/Titillium_Web/TitilliumWeb-Regular.ttf')  format('truetype');
+}
+
+.menu{
+    background-color: #d4d4dc;
+    color: #393f4d;
+}
+
+.display{
+    background-color: #feda6a;
+    color: #393f4d;
+}
+
+body{
+    background-color: #393f4d;
+    color: #feda6a;
+    font-family: 'Titillium';
+}
+
+.anchor-bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.display-pane{
+    height: calc(100vh - 56px - 32px);
+}

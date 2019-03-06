@@ -10,5 +10,5 @@ function MenuViewModel() {
 }
 
 var MenuContainerModel = {
-    MenuViewModel : MenuViewModel
+    MenuViewModel : new MenuViewModel()
 }

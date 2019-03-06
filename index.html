@@ -12,14 +12,14 @@
     <header-component></header-component>
     <div class="container-fluid display-pane">
         <div class="row display-pane">
-            <div class="col-3 menu" id="menu-container" data-bind="with: MenuViewModel">
+            <div class="col-3 menu" id="menu-container" data-bind="with: MenuContainerModel.MenuViewModel">
                 <ul data-bind="foreach: menuItems">
                     <li class="menu-item">
                         <menu-component params="pMenu: $data"></menu-component>
                     </li>
                 </ul>
             </div>
-            <div class="col-9 display" id="job-container" data-bind="with: JobViewModel">
+            <div class="col-9 display" id="job-container" data-bind="with: JobContainerModel.JobViewModel">
                 <ul data-bind="foreach: jobItems">
                     <li class="job-item">
                         <job-component params="pJob: $data" class="job"></job-component>

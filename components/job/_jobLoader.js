@@ -11,7 +11,13 @@ function JobItem(pJob) {
 	self.queueSequence = pJob.queueSequence;
 	self.fileProcessed = pJob.fileProcessed;
 	self.status = pJob.status;
-	self.errorsCount = pJob.errorsCount;
+    self.errorsCount = pJob.errorsCount;
+    self.input = ko.observable('3');
+
+    self.input.subscribe(function(pChangedValue){
+        console.log(pChangedValue);
+        console.log(self.input());
+    });
 }
  
 function JobViewModel() {
@@ -28,5 +34,5 @@ function JobViewModel() {
 }
 
 var JobContainerModel = {
-    JobViewModel : JobViewModel
+    JobViewModel : new JobViewModel()
 }

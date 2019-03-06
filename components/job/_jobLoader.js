@@ -20,19 +20,19 @@ function JobItem(pJob) {
     });
 }
  
-function JobViewModel() {
+function JobViewModel(pJobDataFromServer) {
     var self = this;
 
     self.jobItems = ko.observableArray();
 
-    if(jobDataFromServer)
+    if(pJobDataFromServer)
     {
-        jobDataFromServer.forEach(function(pJob){
+        pJobDataFromServer.forEach(function(pJob){
             self.jobItems.push(new JobItem(pJob));
         })
     }
 }
 
 var JobContainerModel = {
-    JobViewModel : new JobViewModel()
+    JobViewModel : new JobViewModel(jobDataFromServer)
 }
